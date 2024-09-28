@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JTK Coffee Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external stylesheet -->
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        article {
+            margin-top: 20px;
+        }
+        .main-content {
+            display: none; /* Hide all sections by default */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to JTK Coffee Shop</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+            <li><a href="#" onclick="showSection('menu')">Menu</a></li>
+            <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+            <li><a href="#" onclick="showSection('news')">News</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <main>
+            <section id="home" class="main-content">
+                <article>
+                    <h2>Welcome to JTK Coffee Shop</h2>
+                    <p>Your daily dose of caffeine and community in the heart of the city.</p>
+                    <button onclick="window.location.href='menu.html'">Order Now</button>
+                </article>
+            </section>
+
+            <section id="about" class="main-content">
+                <h2>About JTK Coffee Shop</h2>
+                <p>JTK coffee shop was founded by 3 males in the western parts of South Africa, Cape Town. The founders, Jayden, Kassami, and Taulha, aimed to make mornings special for fellow Capetonians with well-crafted coffee. Our mission is to create exceptional coffee experiences while fostering a sense of community.</p>
+            </section>
+
+            <section id="contact" class="main-content">
+                <h2>Contact Us</h2>
+                <p>Email: contact@jtkcoffeeshop.com</p>
+                <p>Phone: (074) 454-7998</p>
+            </section>
+
+            <section id="menu" class="main-content">
+                <h2>Our Coffee Selections</h2>
+                <ul>
+                    <li>Espresso - R30</li>
+                    <li>Americano - R40</li>
+                    <li>Latte - R50</li>
+                    <li>Cappuccino - R50</li>
+                    <li>Mocha - R60</li>
+                </ul>
+                <h2>Pastries</h2>
+                <ul>
+                    <li>Croissant - R20</li>
+                    <li>Chocolate Chip Cookie - R10</li>
+                    <li>Blueberry Muffin - R20</li>
+                </ul>
+            </section>
+
+            <section id="blog" class="main-content">
+                <h2>Our Blog</h2>
+                <p>Stay tuned for updates on our latest coffee blends and community events.</p>
+            </section>
+
+            <section id="news" class="main-content">
+                <h2>Latest News</h2>
+                <p>Come back for the latest news about our shop and exciting coffee trends.</p>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 JTK Coffee Shop. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.main-content');
+            sections.forEach(section => {
+                section.style.display = 'none'; // Hide all sections
+            });
+            document.getElementById(sectionId).style.display = 'block'; // Show the selected section
+        }
+
+        // Show the home section by default
+        showSection('home');
+    </script>
+</body>
+</html>

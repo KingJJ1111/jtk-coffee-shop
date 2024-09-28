@@ -1,0 +1,96 @@
+/* styles.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Container for all content */
+.container {
+    max-width: 1200px; /* Limits width for larger screens */
+    margin: 0 auto; /* Center container */
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigation styles */
+nav {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none; /* Removes bullet points */
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Inline items for horizontal navigation */
+    margin: 0 15px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Main content area */
+main {
+    display: flex; /* Flexbox for layout */
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+article {
+    flex: 1; /* Takes available space */
+    margin: 10px; /* Spacing between articles */
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styles */
+aside {
+    width: 300px; /* Fixed width for sidebar */
+    margin: 10px; /* Spacing between sidebar and main */
+    padding: 20px;
+    background: #e2e2e2;
+    border-radius: 5px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #ffffff;
+    position: relative; /* Adjust footer positioning */
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Responsive design for larger screens */
+@media screen and (min-width: 1024px) {
+    nav ul li {
+        margin: 0 20px;
+    }
+    article, aside {
+        padding: 30px;
+    }
+}
